@@ -2,7 +2,12 @@ import React from 'react';
 
 function ContactUs() {
     return (
-        <p>Contact</p>
+        <>
+        <div className='container'>
+           <p>Contact</p>
+           <div>what?</div>
+        </div>
+        </>
     )
 }
 
