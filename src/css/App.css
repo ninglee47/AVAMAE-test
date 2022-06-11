@@ -26,49 +26,32 @@ span {
 
 .logo {
   height: 25px;
+  align-self: center;
 }
 
 /* Nav bar section */
-.nav {
-  padding-top: 20px;
-  padding-bottom: 100px;
+.navBar {
+  display: grid;
+  grid-template-columns: 7fr 1fr 1fr 1fr 1fr;
+  padding-top: 10px;
 }
 
-.nav div.main_list{
-  width: 450px;
-  /* height: 60px; */
-  float: right;
-}
-
-.nav div.main_list ul{
-  width:100%;
-  height: 60px;
-  display: flex;
-  list-style: none;
-  /* margin: 0;
-  padding: 0; */
-}
-
-.nav div.main_list ul li {
-  width: 100px;
-
-}
-
-.nav div.main_list ul li a {
+.navBar a {
   text-decoration: none;
   color: #404040;
   text-transform: uppercase;
+  font-size: 15px;
+  padding: 10px 0;
 }
   
-.nav div.main_list ul li button {
-  background-color: #b0e0e6;
-  color: #4682B4;
+.navBar button {
+  background-color: #f1f8ff;
+  color: #208ae0;
   border: none;
-  margin-left: 20px;
-  padding: 15px 25px;
+  padding: 5px;
   border-radius: 2px;
+  font-weight: bold;
 }
-
 
 /* Main content */
 .page {

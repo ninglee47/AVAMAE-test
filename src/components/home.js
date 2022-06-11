@@ -52,6 +52,7 @@ function Home({imgs}) {
                     <br/>
                     <span>
                         Ut sed ligula lectus. Ut mollis fermentum massa. Vestibulum in congue risus, nec elementum odio. Nulla molestie risus dui, non fringilla eros sodales quis. Maecenas vestibulum a ipsum quis luctus. Donec lacus risus, faucibus et velit vel, convallis commodo massa.
+                        Maecenas rhoncus luctus elit. Sed leo erat, sagittis eget interdum id, vestibulum ac libero. Donec velit purus, elementum sed pulvinar at, blandit vel ante. Nulla id justo nisi. In interdum, est ut volutpat imperdiet, quam nisi tempus eros, et ornare mauris sem sed urna.
                         <br/>
                         <br/>
                     </span>

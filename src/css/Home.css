@@ -13,6 +13,24 @@
     font-size: 45px;
 }
 
+/* Overwrite swiper style */
+.swiper-button-next::after, .swiper-button-prev::after{
+    color: white;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 50px;
+}
+
+.swiper-pagination > .swiper-pagination-bullet {
+    opacity: 1;
+    background-color: white;
+}
+
+.swiper-pagination > .swiper-pagination-bullet-active {
+    background-color: rgb(79, 140, 190);
+}
+
 /* Section 2 */
 #sec2 {
     display: flex;
@@ -61,7 +79,7 @@ h3 {
 
 .login {
     background-color: white;
-    color: steelblue;
+    color: rgb(39, 96, 142);
     border: none;
     font-weight: bold;
     font-size: 10px;
@@ -70,14 +88,14 @@ h3 {
 }
 
 .gridContainer div:first-child {
-    background-color: sienna;
-    border-radius: 3px;
-    margin-top: 60px;
-    max-width: 700px;
+    margin-top: 40px;
 }
 
 .gridContent {
+    background-color: rgb(96, 84, 78);
+    border-radius: 3px;
     padding: 30px;
+    margin-right: 50px;
 }
 
 .gridContent h3 {
@@ -115,7 +133,7 @@ h6 {
 }
 
 .contact {
-    background-color: steelblue;
+    background-color: rgb(39, 96, 142);
     color: white;
     border: none;
     font-weight: bold;

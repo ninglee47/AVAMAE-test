@@ -1,12 +1,11 @@
 import './css/App.css';
 import {useState, useEffect} from 'react';
-import { Routes, Route, Link} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Nav from './components/Nav';
 import About from './components/about-us';
 import Home from './components/home';
 import ContactUs from './components/contact-us';
-import {ReactComponent as Logo} from './pics/Logo.svg';
 
 function App() {
   const [images, setImages] = useState()
@@ -24,36 +23,9 @@ function App() {
 
   return (
     <div className="App">
-      <nav className='nav'>
-        <div className='container'>
-          <div className='nav_block'>
-            {/* logo */}
-            {/* <div> */}
-              <Logo className='logo'/>
-            {/* </div> */}
+       
+       <Nav />
   
-            {/* Links */}
-            <div className='main_list'>
-              <ul>
-                <li>
-                <Link to="/">Home</Link>
-                </li>
-                <li>
-                <Link to="/about-us">About</Link>
-                </li>
-                <li>
-                <Link to="/contact-us">Contact Us</Link>
-                </li> 
-                <li>
-                <button className='login'>Log in</button>
-                </li>
-              </ul>     
-            </div>
-
-            </div>
-          </div>
-        </nav>
-        
       <div className='page'>
       <Routes>
         <Route path="/" element={<Home imgs={images}/>} />
