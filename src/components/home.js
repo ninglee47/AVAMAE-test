@@ -18,9 +18,11 @@ function Home({imgs}) {
         {/* Section 1 */}
         <section id='sec1'>
             <ImageSwiper imgs={imgs}/>
+            
         </section>
         
         {/* Section 2 */}
+        <i class="fas fa-triangle"></i>
         <section className='container' id='sec2'>
           <article>
             <h3>Etiam aliquet eleifend posuere pharetra.</h3>

@@ -14,13 +14,7 @@
 }
 
 /* Overwrite swiper style */
-.swiper-button-next::after, .swiper-button-prev::after{
-    color: white;
-}
 
-.swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 50px;
-}
 
 .swiper-pagination > .swiper-pagination-bullet {
     opacity: 1;
@@ -29,6 +23,22 @@
 
 .swiper-pagination > .swiper-pagination-bullet-active {
     background-color: rgb(79, 140, 190);
+}
+
+.swiper-button-prev, .swiper-button-next {
+    top: 45%;
+    width: 40px;
+    height: 40px;
+    background: gray;
+    /* color: blue; */
+    opacity: 0.2;
+    font-weight: 700;
+    outline: 0;
+    /* transition: background-color .2s ease, color .2s ease; */
+}
+
+.swiper-button-next::after, .swiper-button-prev::after{
+    color: white;
 }
 
 /* Section 2 */
