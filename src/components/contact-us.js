@@ -7,10 +7,12 @@ import '../css/Contact.css';
 const TextInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
     const className = props.name.replace(".", "_")
+    console.log(field.name, label)
     return (
       <div className={`${className}`}>
         <div>
         <label htmlFor={props.id || props.name}>{label}</label>
+        {label.includes("Phone") || label=="Address line 2" ? <span className='optional'> - optional</span> : <></>}
         </div>
         <input className="text-input" {...field} {...props} />
         {meta.touched && meta.error ? (
@@ -31,7 +33,7 @@ const PhoneInput = ({ ...props }) => {
                   {field.value.map((phone, index)=> (
                       <div key={index}>
                           <TextInput
-                            label={`Phone number ${index + 1} -optional`}
+                            label={`Phone number ${index + 1}`}
                             name={`phone_number.${index}`}
                             type="text"
                            />
@@ -56,6 +58,7 @@ const MessageInput = ({ label, ...props }) => {
       <div>
         <div>
           <label htmlFor={props.id || props.name}>{label}</label>
+          <span className='messageReminder'>Maximum text length is 500 characters</span>
         </div>
         <textarea className="text-input" {...field} {...props} />
         {meta.touched && meta.error ? (
@@ -113,7 +116,6 @@ const phoneRegExp = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
 
 function ContactUs() {
     const [addressForm, setAddressForm] = useState(false);
-
     return (
         <>
         <hr className="solid" />
@@ -121,7 +123,7 @@ function ContactUs() {
            <div className='flex-container'>
                <div className='form'>
                 <h4>Contact us</h4>
-                <p>Integer sagittis condimentum pellentesque. Sed at sapien id ex pretium maximus congue sed nunc. Aliquam molestie massa ultricies ante porta.</p>
+                <h6>Integer sagittis condimentum pellentesque. Sed at sapien id ex pretium maximus congue sed nunc. Aliquam molestie massa ultricies ante porta.</h6>
                 <Formik
                    initialValues={{
                      fullName: '',
@@ -139,15 +141,7 @@ function ContactUs() {
                      phone_number: Yup.string()
                        .matches(phoneRegExp, 'Phone number is not valid'),
                      message:Yup.string()
-                       .test(
-                           "Check Length",
-                           "Exceed max length",
-                           (val) => {
-                            if (!val) {
-                                return true
-                            }
-                            return val.split(' ').length <= 500}
-                       )
+                       .max(500, "Exceed max length")
                    })}
                    onSubmit={(values, { setSubmitting }) => {
                      setTimeout(() => {

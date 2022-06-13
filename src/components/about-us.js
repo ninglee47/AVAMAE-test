@@ -40,7 +40,7 @@ function About() {
                     </ul>
                 </div>
 
-                <span>
+                <span className='lastParagaph'>
                   In condimentum vel metus nec vestibulum. Nullam turpis neque, fringilla nec iaculis sed, commodo eu ligula. Nulla ac euismod ipsum. Cras consectetur viverra suscipit. In hac habitasse platea dictumst. Fusce in quam ultricies, ultricies ex sed, semper nisi. Fusce velit enim, mattis id lectus vel, rutrum luctus libero. Suspendisse id consectetur purus.
                   <br/>
                   <br/>
