@@ -7,6 +7,8 @@ import About from './components/about-us';
 import Home from './components/home';
 import ContactUs from './components/contact-us';
 
+//img to webp
+
 function App() {
   const [images, setImages] = useState()
   useEffect(()=> {
@@ -23,9 +25,8 @@ function App() {
 
   return (
     <div className="App">
-       
        <Nav />
-  
+       
       <div className='page'>
       <Routes>
         <Route path="/" element={<Home imgs={images}/>} />
