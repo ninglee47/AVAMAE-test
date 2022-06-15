@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/About.css';
-import Office from '../pics/shutterstock_696636415.jpg';
+import Office from '../pics/shutterstock_696636415.webp';
 
 function About() {
     return (

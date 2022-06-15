@@ -26,8 +26,8 @@ const ImageSwiper = ({imgs}) => {
         slidesPerView={1}
         navigation
         pagination={{ dynamicBullets: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
+        //onSwiper={(swiper) => console.log(swiper)}
+        //onSlideChange={() => console.log('slide change')}
       >
         {imgs.map( (img, i) => (
             <SwiperSlide key={i}>

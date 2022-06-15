@@ -23,3 +23,12 @@ ul {
     margin: 20px;
     padding: 0;
 }
+
+@media (max-width: 900px) {
+    .aboutHeader {
+        font-weight: 500;
+    }
+    img.center {
+        width: 100%;
+    }
+}

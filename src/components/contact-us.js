@@ -3,6 +3,7 @@ import { Formik, Form, useField, FieldArray } from 'formik';
 import axios from 'axios';
 
 import '../css/Contact.css';
+import SubmitSucess from './submitSucess';
 import {ReactComponent as SubmitButton} from '../pics/Icon_Submit.svg';
 
 function ContactUs() {
@@ -12,7 +13,6 @@ function ContactUs() {
     const TextInput = ({ label, ...props }) => {
       const [field] = useField(props);
       const className = props.name.replace(".", "_")
-      // console.log(field.name, label)
       return (
         <div className={`${className}`}>
           <div>
@@ -75,6 +75,7 @@ function ContactUs() {
             onClick={()=> {setAddressForm(!addressForm)}}
             />
             {children}
+            <span class="checkmark"></span>
           </label>
           <span>Add address details</span>
         </div>
@@ -125,14 +126,13 @@ function ContactUs() {
 
     return (
       <>      
-      {!submitStatus ? 
-        <>
         <hr className="solid" />
         <div className='container'>
            <div className='flex-container'>
+           {!submitStatus ? 
                <div className='form'>
                 <h4>Contact us</h4>
-                <h6>Integer sagittis condimentum pellentesque. Sed at sapien id ex pretium maximus congue sed nunc. Aliquam molestie massa ultricies ante porta.</h6>
+                <p>Integer sagittis condimentum pellentesque. Sed at sapien id ex pretium maximus congue sed nunc. Aliquam molestie massa ultricies ante porta.<br/><br/></p>
                 <Formik
                    initialValues={{
                      FullName: '',
@@ -149,29 +149,14 @@ function ContactUs() {
                        Country:''}
                    }}
 
-                   //validationSchema={Yup.object({
-                   //  FullName: Yup.string()
-                   //    .required('Required'),
-                   //  EmailAddress: Yup.string()
-                   //    .email('Invalid email address')
-                   //    .required('Required'),
-                   //  PhoneNumbers: Yup.array()
-                   //    .of(Yup
-                   //    .string()
-                   //    .matches(phoneRegExp, 'Phone number is not valid')),
-                   //  Message:Yup.string()
-                   //    .required('Required')
-                   //    .max(500, "Exceed max length")
-                   //})}
-
                    onSubmit={(values, { setSubmitting }) => {
                      setTimeout(() => {
-                       alert(JSON.stringify(values, null, 2));
+                       //alert(JSON.stringify(values, null, 2));
                        const apiUrl = 'https://interview-assessment.api.avamae.co.uk/api/v1/contact-us/submit'
                       
                       let data = {...values}
                       data.PhoneNumbers = data.PhoneNumbers.filter(function (el) {
-                        return el != "";
+                        return el !== "";
                       });
 
                        axios.post(apiUrl, data)
@@ -238,11 +223,11 @@ function ContactUs() {
                   </Form>
                 </Formik> 
                 </div>
+                : <SubmitSucess />}
                 <div className='contactPageLogo'></div>
            </div>
         </div>
-        </> : <>Yeah!</>
-      }
+        
       </>
     )
 }

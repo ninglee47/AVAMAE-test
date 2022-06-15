@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../css/Home.css';
-import Office from '../pics/shutterstock_696636415.jpg';
+import Office from '../pics/shutterstock_696636415.webp';
 import ImageSwiper from './swiper';
 import {Link} from "react-router-dom";
 
@@ -33,7 +33,9 @@ function Home({imgs}) {
                 <li>Nulla vitae leo vitae ipsum lobortis iaculis.</li>
                 <li>Curabitur ultrices metus ut urna feugiat, eu convallis elit lacinia.</li>
             </ul>
-            <button className='contact'>Learn more</button>
+            <Link to="/about-us">
+              <button className='contact'>Learn more</button>
+            </Link>
           </article>
             
           <article>
@@ -54,7 +56,7 @@ function Home({imgs}) {
                     <br/>
                     <span>
                         Ut sed ligula lectus. Ut mollis fermentum massa. Vestibulum in congue risus, nec elementum odio. Nulla molestie risus dui, non fringilla eros sodales quis. Maecenas vestibulum a ipsum quis luctus. Donec lacus risus, faucibus et velit vel, convallis commodo massa.
-                        Maecenas rhoncus luctus elit. Sed leo erat, sagittis eget interdum id, vestibulum ac libero. Donec velit purus, elementum sed pulvinar at, blandit vel ante. Nulla id justo nisi. In interdum, est ut volutpat imperdiet, quam nisi tempus eros, et ornare mauris sem sed urna.
+                        Maecenas rhoncus luctus elit. Sed leo erat, sagittis eget interdum id, vestibulum ac libero. Donec velit purus, elementum sed pulvinar at, blandit vel ante.
                         <br/>
                         <br/>
                     </span>
