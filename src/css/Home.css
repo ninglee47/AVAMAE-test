@@ -163,7 +163,8 @@ h3 {
 
 @media (max-width: 900px) { 
     #sec3 {
-        /* background-position: 75% 10%; */
+        background: url(../pics/shutterstock_1302552622-mobile.webp);
+        background-position: 77%;
         background-repeat: no-repeat;
         background-size: cover;
         height: 500px;
@@ -239,6 +240,9 @@ h3 {
 }
 
 @media (max-width: 900px) { 
+    #sec4 {
+        padding-top: 20px;
+    }
     .header h3 {
         font-size: 20px;
         font-weight: 500;

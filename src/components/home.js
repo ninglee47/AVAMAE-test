@@ -1,9 +1,11 @@
 import React from 'react';
-
-import '../css/Home.css';
-import Office from '../pics/shutterstock_696636415.webp';
 import ImageSwiper from './swiper';
 import {Link} from "react-router-dom";
+
+import '../css/Home.css';
+import Office from '../pics/shutterstock_696636415-small.webp';
+import Office_Mobile from '../pics/shutterstock_696636415-mobile.webp';
+
 
 function Home({imgs}) {
     //console.log(imgs)
@@ -40,7 +42,7 @@ function Home({imgs}) {
             
           <article>
             <div className='crop-height'>
-            <img className='scale' src={Office} alt='office' />
+            <div className='office_img'></div>
             </div>
           </article>
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import '../css/About.css';
-import Office from '../pics/shutterstock_696636415.webp';
 
 function About() {
     return (
@@ -20,7 +19,9 @@ function About() {
                    <br/>
                    <br/>
                 </span>
-                <img src={Office} alt='office' className='center'/>
+
+                <div className='office_img'></div>
+                
                 <span>
                    <br/>
                    Vivamus posuere volutpat mattis. Pellentesque a nibh urna. Praesent id dui a nunc facilisis euismod. Donec ac ipsum magna. Etiam molestie nisl dolor. Donec non libero id tortor pellentesque rhoncus. Aliquam laoreet tortor urna. In blandit nec tortor eget dictum. Mauris fermentum ultricies mauris sit amet vestibulum. Curabitur aliquet elit sed erat vestibulum efficitur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam non accumsan diam, ullamcorper dapibus dolor. Donec mollis lacus vitae lacus maximus, eget eleifend ex imperdiet. Fusce feugiat ornare odio, sed volutpat lectus tristique vel. In cursus erat eu lacus tempus molestie.
