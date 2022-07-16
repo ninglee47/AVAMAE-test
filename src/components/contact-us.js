@@ -75,7 +75,7 @@ function ContactUs() {
             onClick={()=> {setAddressForm(!addressForm)}}
             />
             {children}
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
           <span>Add address details</span>
         </div>
